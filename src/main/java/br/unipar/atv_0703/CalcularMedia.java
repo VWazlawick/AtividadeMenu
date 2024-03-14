@@ -4,6 +4,7 @@
  */
 package br.unipar.atv_0703;
 
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -39,6 +40,11 @@ public class CalcularMedia extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
 
         tfNota4.setName("tfNota4"); // NOI18N
+        tfNota4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfNota4KeyReleased(evt);
+            }
+        });
 
         tfNota2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         tfNota2.setName("tfNota2"); // NOI18N
@@ -47,17 +53,32 @@ public class CalcularMedia extends javax.swing.JPanel {
                 tfNota2ActionPerformed(evt);
             }
         });
+        tfNota2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfNota2KeyReleased(evt);
+            }
+        });
 
         jLabel4.setText("Nota 2");
 
         jLabel1.setText("Nota 1");
 
         tfNota1.setName("tfNota1"); // NOI18N
+        tfNota1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfNota1KeyReleased(evt);
+            }
+        });
 
         tfNota3.setName("tfNota3"); // NOI18N
         tfNota3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNota3ActionPerformed(evt);
+            }
+        });
+        tfNota3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfNota3KeyReleased(evt);
             }
         });
 
@@ -71,6 +92,11 @@ public class CalcularMedia extends javax.swing.JPanel {
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+        jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jButton1KeyReleased(evt);
             }
         });
 
@@ -133,6 +159,36 @@ public class CalcularMedia extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         calcularMedia();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyReleased
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            calcularMedia();
+        }
+    }//GEN-LAST:event_jButton1KeyReleased
+
+    private void tfNota4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNota4KeyReleased
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            calcularMedia();
+        }
+    }//GEN-LAST:event_tfNota4KeyReleased
+
+    private void tfNota1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNota1KeyReleased
+       if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            calcularMedia();
+        }
+    }//GEN-LAST:event_tfNota1KeyReleased
+
+    private void tfNota3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNota3KeyReleased
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            calcularMedia();
+        }
+    }//GEN-LAST:event_tfNota3KeyReleased
+
+    private void tfNota2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNota2KeyReleased
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            calcularMedia();
+        }
+    }//GEN-LAST:event_tfNota2KeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

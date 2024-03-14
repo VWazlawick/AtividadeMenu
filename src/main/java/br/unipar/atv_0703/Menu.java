@@ -6,6 +6,7 @@ package br.unipar.atv_0703;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -59,7 +60,36 @@ public class Menu extends JFrame{
         menu1.add(menuItem2);
         menu1.add(menuItem3);
         
+        menu1.setMnemonic(KeyEvent.VK_ALT);
+        
         menuBar.add(menu1);
+
+        JMenu menuMensagens = new JMenu("Mensagens");
+        
+        JMenuItem mensageWarning = new JMenuItem("Warning");
+        JMenuItem mensageError = new JMenuItem("Error");
+        JMenuItem mensageQuestion = new JMenuItem("Question");
+        JMenuItem mensageInformation = new JMenuItem("Information");
+        
+        menuMensagens.add(mensageWarning);
+        menuMensagens.add(mensageError);
+        menuMensagens.add(mensageQuestion);
+        menuMensagens.add(mensageInformation);
+        
+        menuBar.add(menuMensagens);
+        
+        JMenu menuCadastro = new JMenu("Cadastro");
+        
+        JMenu menuCliente = new JMenu("Cliente");
+        
+        JMenuItem cadastrarCliente = new JMenuItem("Cadastrar");
+        JMenuItem listarCliente = new JMenuItem("Listar");
+        
+        menuCadastro.add(menuCliente);
+        menuCliente.add(cadastrarCliente);
+        menuCliente.add(listarCliente);
+        
+        menuBar.add(menuCadastro);
         
         setJMenuBar(menuBar);
     }
@@ -80,4 +110,5 @@ public class Menu extends JFrame{
             }
         });
     }
+
 }
